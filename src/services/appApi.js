@@ -5,11 +5,11 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const appApi = createApi({
     reducerPath: "appApi",
-    baseQuery: fetchBaseQuery({ baseUrl: "https://urbn-2.onrender.com" }),
+    baseQuery: fetchBaseQuery({ baseUrl: "https://vercel-back.onrender.com" }),
     endpoints: (builder) => ({
         signup: builder.mutation({
             query: (user) => ({
-                url: "https://urbn-2.onrender.com/users/signup",
+                url: "https://vercel-back.onrender.com/users/signup",
                 method: "POST",
                 body: user,
             }),
@@ -17,7 +17,7 @@ export const appApi = createApi({
 
         login: builder.mutation({
             query: (user) => ({
-                url: "https://urbn-2.onrender.com/users/login",
+                url: "https://vercel-back.onrender.com/users/login",
                 method: "POST",
                 body: user,
             }),
@@ -25,7 +25,7 @@ export const appApi = createApi({
         // creating product
         createProduct: builder.mutation({
             query: (product) => ({
-                url: "https://urbn-2.onrender.com/products",
+                url: "https://vercel-back.onrender.com/products",
                 body: product,
                 method: "POST",
             }),
@@ -33,7 +33,7 @@ export const appApi = createApi({
 
         deleteProduct: builder.mutation({
             query: ({ product_id, user_id }) => ({
-                url: `https://urbn-2.onrender.com/products/${product_id}`,
+                url: `https://vercel-back.onrender.com/products/${product_id}`,
                 body: {
                     user_id,
                 },
@@ -43,7 +43,7 @@ export const appApi = createApi({
 
         updateProduct: builder.mutation({
             query: (product) => ({
-                url: `https://urbn-2.onrender.com/products/${product.id}`,
+                url: `https://vercel-back.onrender.com/products/${product.id}`,
                 body: product,
                 method: "PATCH",
             }),
@@ -52,7 +52,7 @@ export const appApi = createApi({
         // add to cart
         addToCart: builder.mutation({
             query: (cartInfo) => ({
-                url: "https://urbn-2.onrender.com/products/add-to-cart",
+                url: "https://vercel-back.onrender.com/products/add-to-cart",
                 body: cartInfo,
                 method: "POST",
             }),
@@ -60,7 +60,7 @@ export const appApi = createApi({
         // remove from cart
         removeFromCart: builder.mutation({
             query: (body) => ({
-                url: "https://urbn-2.onrender.com/products/remove-from-cart",
+                url: "https://vercel-back.onrender.com/products/remove-from-cart",
                 body,
                 method: "POST",
             }),
@@ -69,7 +69,7 @@ export const appApi = createApi({
         // increase cart
         increaseCartProduct: builder.mutation({
             query: (body) => ({
-                url: "https://urbn-2.onrender.com/products/increase-cart",
+                url: "https://vercel-back.onrender.com/products/increase-cart",
                 body,
                 method: "POST",
             }),
@@ -78,7 +78,7 @@ export const appApi = createApi({
         // decrease cart
         decreaseCartProduct: builder.mutation({
             query: (body) => ({
-                url: "https://urbn-2.onrender.com/products/decrease-cart",
+                url: "https://vercel-back.onrender.com/products/decrease-cart",
                 body,
                 method: "POST",
             }),
@@ -86,7 +86,7 @@ export const appApi = createApi({
         // create order
         createOrder: builder.mutation({
             query: (body) => ({
-                url: "https://urbn-2.onrender.com/orders",
+                url: "https://vercel-back.onrender.com/orders",
                 method: "POST",
                 body,
             }),
