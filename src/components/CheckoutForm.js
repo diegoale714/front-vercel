@@ -22,7 +22,7 @@ function CheckoutForm() {
     if (!stripe || !elements || user.cart.count <= 0) return
     setPaying(true)
     const { client_secret } = await fetch(
-      'https://vercel-back3.onrender.com/create-payment',
+      'https://vercel-back.onrender.com/create-payment',
       {
         method: 'POST',
         headers: {
