@@ -22,7 +22,7 @@ function App() {
   const user = useSelector((state) => state.user)
   const dispatch = useDispatch()
   useEffect(() => {
-    const socket = io('https://vercel-back.onrender.com')
+    const socket = io('https://back-vercel-v3.onrender.com')
     socket.off('notification').on('notification', (msgObj, user_id) => {
       // logic for notification
       if (user_id === user._id) {

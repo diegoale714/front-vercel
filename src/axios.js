@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-  baseURL: 'https://vercel-back.onrender.com',
+  baseURL: 'https://back-vercel-v3.onrender.com',
 })
 
 export default instance
