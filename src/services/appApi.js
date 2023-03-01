@@ -51,7 +51,7 @@ export const appApi = createApi({
     // add to cart
     addToCart: builder.mutation({
       query: (cartInfo) => ({
-        url: 'https://vercel-back3.onrender.comproducts/add-to-cart',
+        url: 'https://vercel-back3.onrender.com/products/add-to-cart',
         body: cartInfo,
         method: 'POST',
       }),
